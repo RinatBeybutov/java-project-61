@@ -1,6 +1,7 @@
 plugins {
     id("java")
     application
+    id("checkstyle")
 }
 
 group = "org.example"
@@ -23,4 +24,8 @@ tasks.test {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+checkstyle {
+    toolVersion="9.2.1"
 }
