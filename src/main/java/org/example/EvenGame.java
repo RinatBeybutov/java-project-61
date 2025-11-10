@@ -10,12 +10,12 @@ public class EvenGame {
 
   public static void play(Scanner scanner) {
     String name = greetGame(scanner);
-    System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'." );
+    System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
     var answer = scanner.next();
     int countCorrectAnswers = 0;
     while (countCorrectAnswers < COUNT_THRESHOLD) {
-      int number = (int)(Math.random() * 100);
-      System.out.println("Question: " +  number);
+      int number = (int) (Math.random() * 100);
+      System.out.println("Question: " + number);
       String expected = number % 2 == 0 ? "yes" : "no";
       if (expected.equals(answer)) {
         System.out.println("Correct!");
