@@ -1,25 +1,21 @@
-package org.example;
-
-import static org.example.Cli.greetGame;
+package org.example.games;
 
 import java.util.Scanner;
 
-public class CalcGame {
+public class EvenGame {
 
   public static final int COUNT_THRESHOLD = 3;
 
   public static void play(Scanner scanner) {
-    String name = greetGame(scanner);
-    System.out.println("What is the result of the expression?" );
-
+    String name = GreetGame.play(scanner);
+    System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    var answer = scanner.next();
     int countCorrectAnswers = 0;
     while (countCorrectAnswers < COUNT_THRESHOLD) {
-      int firstNumber = (int)(Math.random() * 20);
-      int secondNumber = (int)(Math.random() * 20);
-      System.out.printf("Question: %d * %d %n", firstNumber, secondNumber);
-      var expected = firstNumber * secondNumber;
-      int answer = scanner.nextInt();
-      if (expected == answer) {
+      int number = (int) (Math.random() * 100);
+      System.out.println("Question: " + number);
+      String expected = number % 2 == 0 ? "yes" : "no";
+      if (expected.equals(answer)) {
         System.out.println("Correct!");
         countCorrectAnswers++;
       } else {
