@@ -5,6 +5,7 @@ import org.example.games.CalcGame;
 import org.example.games.EvenGame;
 import org.example.games.GCD;
 import org.example.games.GreetGame;
+import org.example.games.Progression;
 
 public class Main {
   public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class Main {
       case 2 -> EvenGame.play(scanner);
       case 3 -> CalcGame.play(scanner);
       case 4 -> GCD.play(scanner);
+      case 5 -> Progression.play(scanner);
       default -> System.out.println("Неправильный ввод!");
     }
     scanner.close();
