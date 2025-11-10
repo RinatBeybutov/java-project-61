@@ -13,6 +13,7 @@ public class Cli {
         3 - Calc
         4 - GCD
         5 - Progression
+        6 - Prime
         0 - Exit
         """;
     System.out.println(games);
